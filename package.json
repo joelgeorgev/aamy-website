@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
+    "check": "npm run check:format",
+    "check:format": "prettier --check \"./**/*.{json,yml,md}\"",
     "build": "npx @11ty/eleventy",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d _site"
@@ -16,6 +18,7 @@
   "homepage": "https://github.com/joelgeorgev/aamy-website",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "prettier": "^3.1.1"
   }
 }
