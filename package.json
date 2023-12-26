@@ -2,12 +2,12 @@
   "name": "aamy-website",
   "version": "1.0.0",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "check": "npm run check:format",
-    "check:format": "prettier --check \"./**/*.{js,json,yml,md}\"",
-    "build": "npx @11ty/eleventy",
+    "start": "eleventy --serve",
+    "build": "eleventy",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d _site"
+    "deploy": "gh-pages -d _site",
+    "check": "npm run check:format",
+    "check:format": "prettier --check \"./**/*.{js,json,yml,md}\""
   },
   "repository": {
     "type": "git",
